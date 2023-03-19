@@ -8,9 +8,9 @@
 2. 챗봇 질문 입력 시 받은 답변 txt 파일로 다운로드
 
 ### 파일 
-1. Local chatbot (웹서비스 구현 전 테스트용으로 작성한 파일들)
-   - chatgpt_local.py (코드), chat_local.txt (결과파일)
-2. Web chatbot
+- Local chatbot (웹서비스 구현 전 테스트용으로 작성한 파일들)
+   - local/chatgpt_local.py (코드), local/chat_local.txt (결과파일)
+- Web chatbot
    - chat.py, index.html (코드), chat_web.txt (결과파일)
 
 ### 시안
