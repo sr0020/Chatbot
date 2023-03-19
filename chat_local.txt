@@ -1,0 +1,7 @@
+아래 코드를 사용하세요:
+
+```python
+print("Hello, world!")
+``` 
+
+이 코드를 실행하면 추력결과로 "Hello, world!"가 출력됩니다.
