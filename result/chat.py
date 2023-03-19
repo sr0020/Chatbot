@@ -8,7 +8,7 @@ app.config['JSON_AS_ASCII'] = False
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 # openai
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "" # https://platform.openai.com/ 해당 사이트에서 키 다운로드
 openai.api_key = OPENAI_API_KEY
 model = 'gpt-3.5-turbo'
 
