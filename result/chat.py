@@ -8,7 +8,7 @@ app.config['JSON_AS_ASCII'] = False
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 # openai
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 model = 'gpt-3.5-turbo'
 

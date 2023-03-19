@@ -11,8 +11,8 @@
 - Local chatbot (웹서비스 구현 전 테스트용으로 작성한 파일들)
    - local/chatgpt_local.py (코드), local/chat_local.txt (결과파일)
 - Web chatbot
-   - chat.py, index.html (코드), chat_web.txt (결과파일)
+   - result/chat.py, result/index.html (코드), result/chat_web.txt (결과파일)
 
 ### 시안
-![img](ChatBot_(python%2Bhtml).png)
+![img](ChatBot.png)
 
