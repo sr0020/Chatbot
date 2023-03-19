@@ -1,7 +1,7 @@
 import openai
 
 def chat():
-    OPENAI_API_KEY = "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"
+    OPENAI_API_KEY = "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"
     openai.api_key = OPENAI_API_KEY
     model = 'gpt-3.5-turbo'
 
@@ -23,8 +23,6 @@ def chat():
     f = open("chat_local.txt", "w")
     f.write(answer)
     f.close()
-
-    # "Chatbot Answer: {}".format(answer)
 
 if __name__ == '__main__':
     chat()

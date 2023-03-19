@@ -8,7 +8,7 @@ app.config['JSON_AS_ASCII'] = False
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 # openai
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 model = 'gpt-3.5-turbo'
 
@@ -18,7 +18,7 @@ def home():
     return render_template('index.html')
 
 # chat answer
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['GET', 'POST'])
 def chat():
     if request.method == 'POST':
         # 입력값
