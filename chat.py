@@ -18,7 +18,7 @@ def home():
     return render_template('index.html')
 
 # chat answer
-@app.route('/Chatbot/templates/index.html/chat', methods=['POST'])
+@app.route('/chat', methods=['POST'])
 def chat():
     if request.method == 'POST':
         # 입력값
