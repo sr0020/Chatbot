@@ -9,14 +9,7 @@ Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 # print(form_secondwindow)
 
 class secondwindow(QDialog, QWidget, Ui_MainWindow, QtBaseClass):
-    def __init__(self):
-        super(secondwindow.self).__init__()
-        self.initUI()
+    def __init__(self, text):
+        super(secondwindow, self).__init__()
+        self.initUI(text)
         self.show()
-
-    def initUI(self):
-        self.setupUi(self)
-        self.home.clicked.connect(self.Home)
-
-    def Home(self):
-        self.close()

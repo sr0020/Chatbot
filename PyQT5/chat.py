@@ -1,4 +1,4 @@
-#0427
+# 0427 / 0601
 from PyQt5.QtWidgets import *
 import pandas as pd
 import openai
@@ -14,10 +14,20 @@ model = 'gpt-3.5-turbo'
 class secondWindow(QDialog):
     def __init__(self, text):
         super().__init__()
+        self.text = text
         qtCreatorFile = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), "secondwindow.ui")
         self.Ui_MainWindow, self.QtBaseClass = uic.loadUiType(qtCreatorFile)
-        # self.label.setText(text)
+        self.initUI()
         self.show()
+
+    def initUI(self):
+        self.ui = self.Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.label.setText(self.text)
+        # self.home.clicked.connect(self.Home) # 
+
+    # def Home(self):
+    #     self.close()
 
 class Chat(QDialog):
     def __init__(self):
@@ -56,7 +66,7 @@ class Chat(QDialog):
 
         messages = [
             {"role": "system", "content": "You are a helpful assistant"},
-            {"role": "user", "content": query}
+            {"role": "user", "content": query} 
         ]
 
         response = openai.ChatCompletion.create(
@@ -70,15 +80,17 @@ class Chat(QDialog):
         # to txt
         f = open("chat.txt", "w")
         f.write(self.answer)
+
         f.close()
+        
+        # text = self.answer
+        # sw = secondWindow(text)
+        # sw.exec_()
     
     def buttonEvent(self):
-        # print(type(self.question))
-        text = QLineEdit(self.answer).text()
-        sw = secondWindow(text) # 이 text가 secondwindow에 뜨지 않는 상태
+        text = self.answer 
+        sw = secondWindow(text) 
         sw.exec_()
-        # print(type(text)) # Hello! How can I assist you today? => 답변
-        # print(SW) # <__main__.secondWindow object at 0x0000017D983EE5E0> => 객체 반환
 
 if __name__ == "__main__":
     app = QApplication([])
@@ -86,5 +98,3 @@ if __name__ == "__main__":
     dialog.show()
     app.exec_()
     print("Done")
-
-# test = Chat().main()
