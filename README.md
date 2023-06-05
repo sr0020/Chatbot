@@ -2,7 +2,7 @@
 ## ChatGPT API 이용한 웹 챗봇서비스
 > <b> 프로그래밍 시 레퍼런스 코드를 즉각적으로 찾아보기 위해 개발한 챗봇 </b>
 #### 시안
-![img](ChatBot.png)
+![img](img/ChatBot.png)
 
 ### <b> 1. openai API + Flask </b>
 1. 웹에서 구동되는 chatbot 개발: 03.13-03.15
